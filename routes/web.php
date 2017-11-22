@@ -15,3 +15,4 @@ use App\test;
 Route::get('/', function () {
     return view('welcome');
 });
+// this is beta
