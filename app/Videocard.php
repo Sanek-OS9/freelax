@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class test extends Model
+class Videocard extends Model
 {
-    //
+    //protected $guarded = [];
 }
