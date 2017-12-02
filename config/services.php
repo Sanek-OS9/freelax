@@ -35,4 +35,9 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'github' => [
+        'client_id' => '3201fae115d3106ee9fe',
+        'client_secret' => '0d902fe86f30a8507924e508f87b2a3a40bc0cb3',
+        'redirect' => 'http://freelax/login/github/callback',
+    ],
 ];
