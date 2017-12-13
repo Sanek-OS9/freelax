@@ -1,8 +1,9 @@
 {
   "css/app.css": "css/app-e8438026.css",
-  "css/as.css": "css/as-7c30b748.css",
-  "css/as.css.map": "css/as.css-d36579a3.map",
-  "css/core.css": "css/core-04d714e2.css",
-  "css/tests.css": "css/tests-7680d51f.css",
-  "css/tests.css.map": "css/tests.css-70d25717.map"
+  "css/core.css": "css/core-9164ebeb.css",
+  "css/core.css.map": "css/core.css-fbd2d668.map",
+  "css/navigation.css": "css/navigation-e540d98d.css",
+  "css/navigation.css.map": "css/navigation.css-9de5379f.map",
+  "css/register.css": "css/register-1b2426ca.css",
+  "css/register.css.map": "css/register.css-37968ce2.map"
 }

@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('css')
+    <link rel="stylesheet" href="{{ elixir("css/register.css") }}">
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row">

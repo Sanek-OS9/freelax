@@ -8,7 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="stylesheet" href="{{ elixir("css/core.css") }}">
+    {{--  <link rel="stylesheet" href="{{ elixir("css/core.css") }}">  --}}
+    @yield('css')
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 </head>
@@ -17,8 +18,11 @@
         <div class="logo">logo</div>
         <div class="navigation">
         @guest
-            <div><a href="{{ route('login') }}">Login</a></div>
-            <div><a href="{{ route('register') }}">Register</a></div>
+            <div><a href="{{ route('login') }}">Login/Register</a></div>
+            {{--  <div><a href="{{ route('register') }}">Register</a></div>  --}}
+            <div><a href="{{ route('login::github') }}">GitHub</a></div>
+            <div><a href="{{ route('login::facebook') }}">FaceBook</a></div>
+            <div><a href="{{ route('login::google') }}">Google</a></div>
         @else
             <div>{{ Auth::user()->name }}</div>
             <div>
@@ -41,5 +45,7 @@
     <aside class="hg__left">Menu</aside>
     <aside class="hg__right">Ads</aside>
     <footer class="hg__footer">Footer</footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
     </body>
 </html>
