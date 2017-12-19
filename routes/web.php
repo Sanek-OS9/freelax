@@ -30,6 +30,23 @@ Route::group(['prefix' => 'login', 'as' => 'login::', 'middleware' => 'guest'], 
 });
 
 
+Route::group(['prefix' => 'profile/{user}', 'as' => 'profile::'], function () {
+
+    Route::group(['prefix' => 'role', 'as' => 'role-', 'middleware' => 'roles', 'roles' => ['Role']], function () {
+        //редактирование ролей (форма)
+        Route::get('/edit', [
+            'as' => 'edit', 
+            'uses' => 'UserController@roleEdit', 
+        ]);
+        //редактирование ролей (сохранение)
+        Route::post('/edit/save', [
+            'as' => 'save', 
+            'uses' => 'UserController@roleSave', 
+        ]);
+    });
+});
+
+
 
 // Route::get('/set', function(){
 //     Session::put('session', 'working');
